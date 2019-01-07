@@ -9,46 +9,58 @@ var imgs2=["image1.jpg","image2.jpg","image3.jpg","image4.jpg"
 ,"image21.jpg","image22.jpg","image23.jpg","image24.jpg"];
 
 var images=["image1.jpg","image2.jpg","image3.jpg"];
-
+var uni1="";
+var uni2="";
+var uni3="";
 var selected=[];
 function changeIMG1(){
+
+  if(images.length>=5){selected.push(uni1);}
+  if(images.length==0){ location.href = "answer.html"; }
 var x=  Math.floor(Math.random() * images.length);
-selected.push(images[x]);
+uni1=images[x];
 document.getElementById("gazo1").src=images[x];
 images.splice(x,1);
 var x=  Math.floor(Math.random() * images.length);
 document.getElementById("gazo2").src=images[x];
+uni2=images[x];
 images.splice(x,1);
 var x=  Math.floor(Math.random() * images.length);
+uni3=images[x];
 selected.push(images[x]);
 document.getElementById("gazo3").src=images[x];
 images.splice(x,1);
 }
 function changeIMG2(){
-var x=  Math.floor(Math.random() * images.length);
-
-document.getElementById("gazo1").src=images[x];
-images.splice(x,1);
-var x=  Math.floor(Math.random() * images.length);
-selected.push(images[x]);
-document.getElementById("gazo2").src=images[x];
-images.splice(x,1);
-var x=  Math.floor(Math.random() * images.length);
-
-document.getElementById("gazo3").src=images[x];
-images.splice(x,1);
+  if(images.length>=5){selected.push(uni2);}
+  var x=  Math.floor(Math.random() * images.length);
+  uni1=images[x];
+  document.getElementById("gazo1").src=images[x];
+  images.splice(x,1);
+  var x=  Math.floor(Math.random() * images.length);
+  document.getElementById("gazo2").src=images[x];
+  uni2=images[x];
+  images.splice(x,1);
+  var x=  Math.floor(Math.random() * images.length);
+  uni3=images[x];
+  selected.push(images[x]);
+  document.getElementById("gazo3").src=images[x];
+  images.splice(x,1);
 }
 function changeIMG3(){
-var x=  Math.floor(Math.random() * images.length);
+  if(images.length>=5){selected.push(uni3);}
+  var x=  Math.floor(Math.random() * images.length);
+  uni1=images[x];
+  document.getElementById("gazo1").src=images[x];
+  images.splice(x,1);
+  var x=  Math.floor(Math.random() * images.length);
+  document.getElementById("gazo2").src=images[x];
+  uni2=images[x];
+  images.splice(x,1);
+  var x=  Math.floor(Math.random() * images.length);
+  uni3=images[x];
+  selected.push(images[x]);
+  document.getElementById("gazo3").src=images[x];
+  images.splice(x,1);
 
-document.getElementById("gazo1").src=images[x];
-images.splice(x,1);
-var x=  Math.floor(Math.random() * images.length);
-
-document.getElementById("gazo2").src=images[x];
-images.splice(x,1);
-var x=  Math.floor(Math.random() * images.length);
-selected.push(images[x]);
-document.getElementById("gazo3").src=images[x];
-images.splice(x,1);
 }
