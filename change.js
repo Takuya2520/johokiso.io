@@ -46,7 +46,7 @@ if(images.length==0){alert(selected);}
   change();
 
 }
-var exh=[[644,834,934],[7,12,11],[30,23,25],[34,45,54]];
+var exh=[[41,32,32],[74,13,11],[30,23,25],[34,45,54]];
 function trans(){
 var  sum=[]; var num=0;
   for(y=0;y<3;y++) {for(x=0;x<selected.length;x++){
@@ -73,5 +73,10 @@ zz.splice(key2p,1);
 nav=Math.min.apply(null,zz);
 for(i=0;i<z.length;i++)
 {if(z[i]==nav){var key3=i;}}
-alert(z); alert(key3);
+var ro=["0.jpg","1.jpg","2.jpg","3.jpg"];
+
+document.getElementById("gaz1").src=ro[key1];
+document.getElementById("gaz2").src=ro[key2];
+document.getElementById("gaz3").src=ro[key3];
+document.getElementById("nori").innerHTML="You would like…";
 }
