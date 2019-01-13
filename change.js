@@ -79,4 +79,52 @@ document.getElementById("gaz1").src=ro[key1];
 document.getElementById("gaz2").src=ro[key2];
 document.getElementById("gaz3").src=ro[key3];
 document.getElementById("nori").innerHTML="You would like…";
+sum.push(30);sum.push(30);
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+  type: 'radar',
+  data: {
+    labels: ["Modernity", "Authentic", "Avangard", "Oriental", "Novel", "Practical", "Europeanclassic"],
+    datasets: [{
+      label: 'yourchoice',
+      backgroundColor: "rgba(153,255,51,0.4)",
+      borderColor: "rgba(153,255,51,1)",
+      data: sum
+    },   {
+         label: 'exhibition1',
+         backgroundColor: "rgba(255,153,0,0.4)",
+         borderColor: "rgba(255,153,0,1)",
+         data: exh[key1]
+       }
+    ]
+  }
+});
+var ctx2 = document.getElementById("myChart2");
+var myChart2 = new Chart(ctx2, {
+  type: 'radar',
+  data: {
+    labels: ["Modernity", "Authentic", "Avangard", "Oriental", "Novel", "Practical", "Europeanclassic"],
+    datasets: [{
+      label: 'exhibition2',
+      backgroundColor: "rgba(153,255,51,0.4)",
+      borderColor: "rgba(153,255,51,1)",
+      data: exh[key2]
+    }, {
+         label: 'exhibition3',
+         backgroundColor: "rgba(255,153,0,0.4)",
+         borderColor: "rgba(255,153,0,1)",
+         data: exh[key3]
+       }
+    ]
+  }
+});
+document.getElementById("gazo1").src="";
+document.getElementById("gazo2").src="";
+document.getElementById("gazo3").src="";
+document.getElementById("texta1").innerHTML="ムンク";
+document.getElementById("texta2").innerHTML="ムン";
+document.getElementById("urla").href="http://yahoo.co.jp";
+document.getElementById("textb1").innerHTML="ムンク";
+document.getElementById("textc1").innerHTML="ムンク";
+
 }
